@@ -23,8 +23,8 @@ pipeline {
     stages {
         stage ('checkout scm') {
             steps {
-                git config --global http.proxy http://192.168.2.117:8888
-                git config --global https.proxy http://192.168.2.117:8888
+                sh 'git config --global http.proxy http://192.168.2.117:8888'
+                sh 'git config --global https.proxy http://192.168.2.117:8888'
                 checkout(scm)
             }
         }
